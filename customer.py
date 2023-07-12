@@ -2,7 +2,7 @@ import random
 database = []
 opt = None
 
-
+#functions for welcome page.
 def welcome():
         print("welcome to johntega Bank app")
         opt= input('''\n choose an option:
@@ -28,7 +28,7 @@ def welcome():
              print("Unknown option")
              welcome()     
                                      
-
+#functions for creating a new account
 def signup():
      ran = random.randint(1, 10000000000)
 
@@ -44,7 +44,7 @@ def signup():
      print(f"Account with the Name: {newUser['fname']} {newUser['lname']}, with Account NO:{newUser['account_no']},Balance: N{newUser['balance']}") 
      print(database)
      return welcome()  
-   
+#functions for displaying account information   
 def display():
         acct_num = int(input("Enter your account number: "))
         acct_pin = int(input("Enter your account pin: "))
@@ -66,7 +66,7 @@ def display():
                 print("Incorrect pin")
             return welcome() 
    
-
+#functions for deposit into account
 def deposit():
         acct_num = int(input("Input your account number:"))
         amount = int(input("Input Amount to be deposted:"))
@@ -81,7 +81,7 @@ def deposit():
             return welcome() 
 
 
-
+#functions for transfer
 def transfer():
         sender_acct_num = int(input("Input sender's account number:"))
         recivers_acct_num = int(input("Input recipient's account number:"))
@@ -111,7 +111,7 @@ def transfer():
                         pass
                     return welcome() 
 
-
+#function for resetting password
 def reset():
         acct_num = int(input("please input your account number:\n"))
         qust_1= input("Do you remember your old password (yes/no) \n")
