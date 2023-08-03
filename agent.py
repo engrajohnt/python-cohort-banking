@@ -1,7 +1,4 @@
-database = []
-opt = None
-
-
+import customer
 
 def  service():
     print('''\n Welcome to johntegaBamking Agent service\n choose an option:
@@ -11,21 +8,17 @@ def  service():
     Opt = input(" Enter option:")
 
     if Opt == "1":
-        from customer import deposit
-        print (database)
+        customer.deposit()
         return service()
     
     elif Opt == "2":
-       from customer import reset
-       
+       customer.reset() 
        return service()
 
     elif Opt == "3":
-        print("Thank you for banking with us.")
-        from customer import exit
+         customer.exit()
 
     else:
         print("unkown option")
         service()  
 
-service()
