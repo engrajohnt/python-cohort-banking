@@ -1,7 +1,7 @@
 import customer
 
 def  service():
-    print('''\n Welcome to johntegaBamking Agent service\n choose an option:
+    print('''\n Welcome to johntegaBanking Agent service\n choose an option:
     1 = Deposit
     2 = Reset customer password
     3 = Exit''')
